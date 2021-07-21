@@ -47,14 +47,8 @@ resource cluster 'Microsoft.ContainerService/managedClusters@2020-09-01' = {
         count: agentCount
         mode: 'System'
         vmSize: agentVMSize
-        type: 'VirtualMachineScaleSets'
-        osType: 'Linux'
-        enableAutoScaling: false
       }
     ]
-    servicePrincipalProfile: {
-      clientId: 'msi'
-    }
     nodeResourceGroup: nodeResourceGroup
   }
 }
