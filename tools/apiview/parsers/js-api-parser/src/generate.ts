@@ -13,6 +13,7 @@ import {
   ReleaseTag,
 } from "@microsoft/api-extractor-model";
 import { buildToken, splitAndBuild, splitAndBuildMultipleLine } from "./jstokens";
+import { generators } from "./tokenGenerators/index";
 
 interface Metadata {
   Name: string;
@@ -281,6 +282,14 @@ function mayHaveChildren(item: ApiItem): boolean {
  * @param item {@link ApiItem} instance
  */
 function buildMemberLineTokens(line: ReviewLine, item: ApiItem) {
+  // If any semantic generators are valid, just use them
+  for (const generator of generators) {
+    if (generator.isValidFor(item)) {
+      line.Tokens.push(...generator.generate(item));
+      console.log(generator.generate(item));
+      return;
+    }
+  }
   if (item instanceof ApiDeclaredItem) {
     if (item.kind === ApiItemKind.Namespace) {
       splitAndBuild(line.Tokens, `declare namespace ${item.displayName} `, item);
@@ -290,24 +299,25 @@ function buildMemberLineTokens(line: ReviewLine, item: ApiItem) {
           buildToken({ Kind: TokenKind.Keyword, Value: "export", HasSuffixSpace: true }),
           buildToken({ Kind: TokenKind.Keyword, Value: "const", HasSuffixSpace: true }),
         );
-      }
-      if (!item.excerptTokens.some((except) => except.text.includes("\n"))) {
-        for (const excerpt of item.excerptTokens) {
-          if (excerpt.kind === ExcerptTokenKind.Reference && excerpt.canonicalReference) {
-            const token = buildToken({
-              Kind: TokenKind.TypeName,
-              NavigateToId: excerpt.canonicalReference.toString(),
-              Value: excerpt.text,
-            });
-            line.Tokens.push(token);
-          } else if (item.kind === ApiItemKind.Enum) {
-            splitAndBuild(line.Tokens, `export enum ${item.displayName}`, item);
-          } else {
-            splitAndBuild(line.Tokens, excerpt.text, item);
-          }
-        }
       } else {
-        splitAndBuildMultipleLine(line, item.excerptTokens, item);
+        if (!item.excerptTokens.some((except) => except.text.includes("\n"))) {
+          for (const excerpt of item.excerptTokens) {
+            if (excerpt.kind === ExcerptTokenKind.Reference && excerpt.canonicalReference) {
+              const token = buildToken({
+                Kind: TokenKind.TypeName,
+                NavigateToId: excerpt.canonicalReference.toString(),
+                Value: excerpt.text,
+              });
+              line.Tokens.push(token);
+            } else if (item.kind === ApiItemKind.Enum) {
+              splitAndBuild(line.Tokens, `export enum ${item.displayName}`, item);
+            } else {
+              splitAndBuild(line.Tokens, excerpt.text, item);
+            }
+          }
+        } else {
+          splitAndBuildMultipleLine(line, item.excerptTokens, item);
+        }
       }
     }
   }

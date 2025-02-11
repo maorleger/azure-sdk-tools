@@ -17,6 +17,7 @@
   ],
   "bin": "bin/ts-genapi.cjs",
   "devDependencies": {
+    "@microsoft/api-extractor": "^7.29.8",
     "@eslint/js": "^9.10.0",
     "@types/eslint__js": "^8.42.3",
     "@types/node": "^18.0.0",
