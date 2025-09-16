@@ -122,3 +122,13 @@ dotnet run --project Azure.Sdk.Tools.Cli -- release-plan get --work-item-id YOUR
 In either case, the _same_ code will be invoked to get both results.
 
 This server is intended to run in **local mcp mode only** and will utilize your environment cached settings to communicate where authentication is necessary.
+
+### Sample Generation Command
+
+Use the sample generator to create language-specific SDK samples from a prompt:
+
+```bash
+dotnet run --project Azure.Sdk.Tools.Cli -- generators samples --package-path ./azure-sdk-for-net/sdk/storage/Azure.Storage.Blobs --prompt "Upload a blob to storage"
+```
+
+Optional flags include `--language` to override detection, `--dry-run` to inspect planned files, and `--overwrite` to replace existing samples.

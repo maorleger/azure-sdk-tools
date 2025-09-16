@@ -4,6 +4,7 @@ using System.CommandLine.Parsing;
 using System.IO.Enumeration;
 using Azure.Sdk.Tools.Cli.Tools;
 using Azure.Sdk.Tools.Cli.Tools.EngSys;
+using Azure.Sdk.Tools.Cli.Tools.Generators;
 using Azure.Sdk.Tools.Cli.Tools.GitHub;
 using Azure.Sdk.Tools.Cli.Tools.Package;
 using Azure.Sdk.Tools.Cli.Tools.Pipeline;
@@ -27,6 +28,7 @@ namespace Azure.Sdk.Tools.Cli.Commands
             typeof(PipelineTestsTool),
             typeof(QuokkaTool),
             typeof(ReadMeGeneratorTool),
+            typeof(SampleGeneratorTool),
             typeof(ReleasePlanTool),
             typeof(ReleaseReadinessTool),
             typeof(SdkBuildTool),
