@@ -1,0 +1,109 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.49.1",
+    "schemaVersion": 1011,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json"
+    }
+  },
+  "kind": "Package",
+  "canonicalReference": "@azure/test-package!",
+  "name": "@azure/test-package",
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "@azure/test-package!",
+      "name": "",
+      "members": [
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/test-package!SimpleInterface:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface SimpleInterface "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "SimpleInterface",
+          "preserveMemberOrder": false,
+          "members": [],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/test-package!InterfaceWithTypeParams:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface InterfaceWithTypeParams<T, U> "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "InterfaceWithTypeParams",
+          "preserveMemberOrder": false,
+          "members": [],
+          "extendsTokenRanges": [],
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            },
+            {
+              "typeParameterName": "U",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/test-package!InterfaceWithExtends:interface",
+          "docComment": "",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface InterfaceWithExtends extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "SimpleInterface",
+              "canonicalReference": "@azure/test-package!SimpleInterface:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "releaseTag": "Public",
+          "name": "InterfaceWithExtends",
+          "preserveMemberOrder": false,
+          "members": [],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

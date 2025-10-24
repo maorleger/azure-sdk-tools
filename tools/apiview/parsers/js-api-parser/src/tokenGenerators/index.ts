@@ -1,5 +1,10 @@
 import { enumTokenGenerator } from "./enum";
 import { functionTokenGenerator } from "./function";
+import { interfaceTokenGenerator } from "./interface";
 import { TokenGenerator } from "./interfaces";
 
-export const generators: TokenGenerator[] = [functionTokenGenerator, enumTokenGenerator];
+export const generators: TokenGenerator[] = [
+  functionTokenGenerator,
+  interfaceTokenGenerator,
+  enumTokenGenerator,
+];
