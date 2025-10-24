@@ -1,11 +1,78 @@
 # Semantic Token Generators - Implementation Checklist
 
-## Phase 0: Foundation ✅
+## Progress Summary
+
+### Completed Phases
+
+#### Phase 0: Foundation ✅
+**Status**: Complete (from prototype)
 - [x] Create `TokenGenerator` interface
 - [x] Create generator registry (`src/tokenGenerators/index.ts`)
 - [x] Integrate into `buildMemberLineTokens` with fallback
 - [x] Implement Function generator
 - [x] Implement Enum generator
+
+**Cleanup Work**:
+- Fixed enum generator to not output braces (parent logic handles it via `mayHaveChildren()`)
+- Fixed test to use correct data file (`renamedEnum.json` instead of `re-exported.json`)
+- Removed debug console.log statements
+- Added placeholder test for function generator
+
+#### Phase 1.1: Interface Generator ✅
+**Status**: Complete - All 4 tests passing
+
+**Key Learnings**:
+1. **API Extractor Model Structure**: Interfaces use `extendsTypes` (array of `HeritageType` objects), not `extendsTokenRanges`
+2. **Token Extraction**: Use `heritageType.excerpt.spannedTokens` NOT `excerpt.tokens` - the latter includes ALL tokens from the file, while spannedTokens only includes the relevant range
+3. **Member Ordering**: API Extractor sorts members alphabetically, not by JSON order - use `.find(m => m.displayName === "Name")` instead of array indices
+4. **Required Metadata**: Test data JSON files must include `tsdocConfig` with `$schema` property or loading fails
+
+**Implementation Details**:
+- Type parameters: Direct access via `item.typeParameters[].name`
+- Extends clause: Iterate through `item.extendsTypes[].excerpt.spannedTokens`
+- Navigation IDs: Extract from `token.canonicalReference.toString()` for Reference tokens
+- Skip whitespace: Check `token.text.trim()` before adding tokens
+
+**Challenges Overcome**:
+- Initial confusion about `extendsTokenRanges` being undefined - discovered API Model exposes `extendsTypes` property instead
+- First attempt parsed wrong tokens (full declaration) - fixed by using `spannedTokens` instead of `tokens`
+
+#### Phase 1.2: Class Generator ✅  
+**Status**: Complete - All 6 tests passing
+
+**Key Learnings**:
+1. **Extends vs Implements**: Classes have `extendsType` (singular, single base class) and `implementsTypes` (array, multiple interfaces)
+2. **Empty Heritage Types**: Must check `item.extendsType.excerpt.spannedTokens.length > 0` - API Extractor creates empty heritage types when there's no actual inheritance
+3. **Abstract Modifier**: Classes have `isAbstract` boolean property - add keyword before "class" if true
+
+**Implementation Details**:
+- Abstract classes: Check `item.isAbstract` and add keyword
+- Extends: Similar to interface, but singular `extendsType` instead of array
+- Implements: Array handling like interface extends, but with "implements" keyword
+- Pattern reuse: Very similar structure to interface generator, demonstrating good abstraction
+
+**Challenges Overcome**:
+- Initial test failures showed extra "extends" keyword for classes without base classes
+- Fixed by checking `spannedTokens.length > 0` before adding extends clause
+- Test data required correct `extendsTokenRange` structure (with startIndex/endIndex)
+
+### Current Status
+- ✅ **Phase 0**: Complete
+- ✅ **Phase 1.1**: Complete (Interface Generator)
+- ✅ **Phase 1.2**: Complete (Class Generator)
+- 🔄 **Phase 1.3**: Next (Method Generator)
+
+**Test Statistics**:
+- Total tests: 12 passing (0 failing)
+- Test files: 4
+- Generators implemented: 4 (Function, Enum, Interface, Class)
+- Lines of generator code: ~300 (vs thousands in legacy string parsing)
+
+**Key Success Factors**:
+1. **TDD Approach**: Writing failing tests first caught edge cases early
+2. **Test Data Quality**: Comprehensive JSON fixtures covering multiple scenarios
+3. **Semantic API Understanding**: Learning the API Extractor Model structure upfront saved debugging time
+4. **Pattern Reuse**: Interface generator pattern worked well for classes with minor modifications
 
 ## Phase 1: Core Top-Level Items (P0)
 
