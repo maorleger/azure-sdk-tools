@@ -9,13 +9,13 @@
 
 ## Phase 1: Core Top-Level Items (P0)
 
-### 1.1 Interface Generator
-- [ ] Write failing test for simple interface
-- [ ] Write failing test for interface with type parameters
-- [ ] Write failing test for interface with extends clause
-- [ ] Implement interface generator
-- [ ] Run tests and verify all pass
-- [ ] Commit: "feat: add interface token generator"
+### 1.1 Interface Generator ✅
+- [x] Write failing test for simple interface
+- [x] Write failing test for interface with type parameters
+- [x] Write failing test for interface with extends clause
+- [x] Implement interface generator
+- [x] Run tests and verify all pass
+- [x] Commit: "feat: add interface token generator"
 
 ### 1.2 Class Generator
 - [ ] Write failing test for simple class
