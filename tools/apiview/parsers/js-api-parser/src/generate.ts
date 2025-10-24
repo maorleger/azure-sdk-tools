@@ -286,7 +286,6 @@ function buildMemberLineTokens(line: ReviewLine, item: ApiItem) {
   for (const generator of generators) {
     if (generator.isValidFor(item)) {
       line.Tokens.push(...generator.generate(item));
-      console.log(generator.generate(item));
       return;
     }
   }

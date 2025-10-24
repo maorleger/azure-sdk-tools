@@ -7,7 +7,7 @@ describe("generate", () => {
   describe("enums", () => {
     it("generates correct models for renamed exports", () => {
       const model: ApiModel = new ApiModel();
-      model.loadPackage(path.join(__dirname, "./data/re-exported.json"));
+      model.loadPackage(path.join(__dirname, "./data/renamedEnum.json"));
 
       const result = generateApiview({
         apiModel: model,
@@ -20,7 +20,6 @@ describe("generate", () => {
           Language: "JavaScript",
         },
       });
-      console.log(JSON.stringify(result, null, 2));
       const enumReviewLine = result.ReviewLines[0].Children?.find(
         (c) => c.LineId === "@azure/test-package!KnownFoo:enum",
       );
