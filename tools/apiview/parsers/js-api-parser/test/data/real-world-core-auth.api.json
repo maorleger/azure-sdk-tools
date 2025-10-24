@@ -1,0 +1,1673 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.52.13",
+    "schemaVersion": 1011,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+      "noStandardTags": true,
+      "tagDefinitions": [
+        {
+          "tagName": "@alpha",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@beta",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@defaultValue",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@decorator",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@deprecated",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@eventProperty",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@example",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@experimental",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@inheritDoc",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@internal",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@label",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@link",
+          "syntaxKind": "inline",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@override",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@packageDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@param",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@privateRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@public",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@readonly",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@remarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@returns",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@sealed",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@see",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@throws",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@typeParam",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@virtual",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@betaDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@internalRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@preapproved",
+          "syntaxKind": "modifier"
+        }
+      ],
+      "supportForTags": {
+        "@alpha": true,
+        "@beta": true,
+        "@defaultValue": true,
+        "@decorator": true,
+        "@deprecated": true,
+        "@eventProperty": true,
+        "@example": true,
+        "@experimental": true,
+        "@inheritDoc": true,
+        "@internal": true,
+        "@label": true,
+        "@link": true,
+        "@override": true,
+        "@packageDocumentation": true,
+        "@param": true,
+        "@privateRemarks": true,
+        "@public": true,
+        "@readonly": true,
+        "@remarks": true,
+        "@returns": true,
+        "@sealed": true,
+        "@see": true,
+        "@throws": true,
+        "@typeParam": true,
+        "@virtual": true,
+        "@betaDocumentation": true,
+        "@internalRemarks": true,
+        "@preapproved": true
+      },
+      "reportUnsupportedHtmlElements": false
+    },
+    "dependencies": {
+      "@azure/abort-controller": "^2.1.2",
+      "@azure/core-util": "^1.13.0",
+      "tslib": "^2.6.2"
+    }
+  },
+  "kind": "Package",
+  "canonicalReference": "@azure/core-auth!",
+  "docComment": "",
+  "name": "@azure/core-auth",
+  "preserveMemberOrder": false,
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "@azure/core-auth!",
+      "name": "",
+      "preserveMemberOrder": false,
+      "members": [
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-auth!AccessToken:interface",
+          "docComment": "/**\n * Represents an access token with an expiration time.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface AccessToken "
+            }
+          ],
+          "fileUrlPath": "src/tokenCredential.ts",
+          "releaseTag": "Public",
+          "name": "AccessToken",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-auth!AccessToken#expiresOnTimestamp:member",
+              "docComment": "/**\n * The access token's expiration timestamp in milliseconds, UNIX epoch time.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "expiresOnTimestamp: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "expiresOnTimestamp",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-auth!AccessToken#refreshAfterTimestamp:member",
+              "docComment": "/**\n * The timestamp when the access token should be refreshed, in milliseconds, UNIX epoch time.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "refreshAfterTimestamp?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "refreshAfterTimestamp",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-auth!AccessToken#token:member",
+              "docComment": "/**\n * The access token returned by the authentication service.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "token: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "token",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-auth!AccessToken#tokenType:member",
+              "docComment": "/**\n * Type of token - `Bearer` or `pop`\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "tokenType?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "\"Bearer\" | \"pop\""
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "tokenType",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@azure/core-auth!AzureKeyCredential:class",
+          "docComment": "/**\n * A static-key-based credential that supports updating the underlying key value.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class AzureKeyCredential implements "
+            },
+            {
+              "kind": "Reference",
+              "text": "KeyCredential",
+              "canonicalReference": "@azure/core-auth!KeyCredential:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/azureKeyCredential.ts",
+          "releaseTag": "Public",
+          "isAbstract": false,
+          "name": "AzureKeyCredential",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@azure/core-auth!AzureKeyCredential:constructor(1)",
+              "docComment": "/**\n * Create an instance of an AzureKeyCredential for use with a service client.\n *\n * @param key - The initial value of the key to use in authentication\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(key: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "key",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ]
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "@azure/core-auth!AzureKeyCredential#key:member",
+              "docComment": "/**\n * The value of the key to be used in authentication\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "get key(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "key",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false,
+              "isProtected": false,
+              "isAbstract": false
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@azure/core-auth!AzureKeyCredential#update:member(1)",
+              "docComment": "/**\n * Change the value of the key.\n *\n * Updates will take effect upon the next request after updating the key value.\n *\n * @param newKey - The new key value to be used\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "update(newKey: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "newKey",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "update"
+            }
+          ],
+          "implementsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@azure/core-auth!AzureNamedKeyCredential:class",
+          "docComment": "/**\n * A static name/key-based credential that supports updating the underlying name and key values.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class AzureNamedKeyCredential implements "
+            },
+            {
+              "kind": "Reference",
+              "text": "NamedKeyCredential",
+              "canonicalReference": "@azure/core-auth!NamedKeyCredential:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/azureNamedKeyCredential.ts",
+          "releaseTag": "Public",
+          "isAbstract": false,
+          "name": "AzureNamedKeyCredential",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@azure/core-auth!AzureNamedKeyCredential:constructor(1)",
+              "docComment": "/**\n * Create an instance of an AzureNamedKeyCredential for use with a service client.\n *\n * @param name - The initial value of the name to use in authentication.\n *\n * @param key - The initial value of the key to use in authentication.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(name: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", key: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "name",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "key",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ]
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "@azure/core-auth!AzureNamedKeyCredential#key:member",
+              "docComment": "/**\n * The value of the key to be used in authentication.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "get key(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "key",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false,
+              "isProtected": false,
+              "isAbstract": false
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "@azure/core-auth!AzureNamedKeyCredential#name:member",
+              "docComment": "/**\n * The value of the name to be used in authentication.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "get name(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "name",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false,
+              "isProtected": false,
+              "isAbstract": false
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@azure/core-auth!AzureNamedKeyCredential#update:member(1)",
+              "docComment": "/**\n * Change the value of the key.\n *\n * Updates will take effect upon the next request after updating the key value.\n *\n * @param newName - The new name value to be used.\n *\n * @param newKey - The new key value to be used.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "update(newName: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", newKey: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "newName",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "newKey",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "update"
+            }
+          ],
+          "implementsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@azure/core-auth!AzureSASCredential:class",
+          "docComment": "/**\n * A static-signature-based credential that supports updating the underlying signature value.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class AzureSASCredential implements "
+            },
+            {
+              "kind": "Reference",
+              "text": "SASCredential",
+              "canonicalReference": "@azure/core-auth!SASCredential:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/azureSASCredential.ts",
+          "releaseTag": "Public",
+          "isAbstract": false,
+          "name": "AzureSASCredential",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@azure/core-auth!AzureSASCredential:constructor(1)",
+              "docComment": "/**\n * Create an instance of an AzureSASCredential for use with a service client.\n *\n * @param signature - The initial value of the shared access signature to use in authentication\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(signature: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "signature",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ]
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "@azure/core-auth!AzureSASCredential#signature:member",
+              "docComment": "/**\n * The value of the shared access signature to be used in authentication\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "get signature(): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "signature",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false,
+              "isProtected": false,
+              "isAbstract": false
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@azure/core-auth!AzureSASCredential#update:member(1)",
+              "docComment": "/**\n * Change the value of the signature.\n *\n * Updates will take effect upon the next request after updating the signature value.\n *\n * @param newSignature - The new shared access signature value to be used\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "update(newSignature: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "newSignature",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "update"
+            }
+          ],
+          "implementsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-auth!GetTokenOptions:interface",
+          "docComment": "/**\n * Defines options for TokenCredential.getToken.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface GetTokenOptions "
+            }
+          ],
+          "fileUrlPath": "src/tokenCredential.ts",
+          "releaseTag": "Public",
+          "name": "GetTokenOptions",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-auth!GetTokenOptions#abortSignal:member",
+              "docComment": "/**\n * The signal which can be used to abort requests.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "abortSignal?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "AbortSignalLike",
+                  "canonicalReference": "@azure/abort-controller!AbortSignalLike:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "abortSignal",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-auth!GetTokenOptions#claims:member",
+              "docComment": "/**\n * Claim details to perform the Continuous Access Evaluation authentication flow\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "claims?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "claims",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-auth!GetTokenOptions#enableCae:member",
+              "docComment": "/**\n * Indicates whether to enable the Continuous Access Evaluation authentication flow\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "enableCae?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "enableCae",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-auth!GetTokenOptions#proofOfPossessionOptions:member",
+              "docComment": "/**\n * Options for Proof of Possession token requests\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "proofOfPossessionOptions?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{\n        nonce: string;\n        resourceRequestMethod: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "HttpMethods",
+                  "canonicalReference": "@azure/core-util!HttpMethods:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";\n        resourceRequestUrl: string;\n    }"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "proofOfPossessionOptions",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 4
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-auth!GetTokenOptions#requestOptions:member",
+              "docComment": "/**\n * Options used when creating and sending HTTP requests for this operation.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "requestOptions?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{\n        timeout?: number;\n    }"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "requestOptions",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-auth!GetTokenOptions#tenantId:member",
+              "docComment": "/**\n * Allows specifying a tenantId. Useful to handle challenges that provide tenant Id hints.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "tenantId?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "tenantId",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-auth!GetTokenOptions#tracingOptions:member",
+              "docComment": "/**\n * Options used when tracing is enabled.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "tracingOptions?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{\n        tracingContext?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TracingContext",
+                  "canonicalReference": "@azure/core-auth!TracingContext:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";\n    }"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "tracingOptions",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 4
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@azure/core-auth!isKeyCredential:function(1)",
+          "docComment": "/**\n * Tests an object to determine whether it implements KeyCredential.\n *\n * @param credential - The assumed KeyCredential to be tested.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isKeyCredential(credential: "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "credential",
+              "canonicalReference": "@azure/core-auth!~credential"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "KeyCredential",
+              "canonicalReference": "@azure/core-auth!KeyCredential:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/keyCredential.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "credential",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isKeyCredential"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@azure/core-auth!isNamedKeyCredential:function(1)",
+          "docComment": "/**\n * Tests an object to determine whether it implements NamedKeyCredential.\n *\n * @param credential - The assumed NamedKeyCredential to be tested.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isNamedKeyCredential(credential: "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "credential",
+              "canonicalReference": "@azure/core-auth!~credential"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "NamedKeyCredential",
+              "canonicalReference": "@azure/core-auth!NamedKeyCredential:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/azureNamedKeyCredential.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "credential",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isNamedKeyCredential"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@azure/core-auth!isSASCredential:function(1)",
+          "docComment": "/**\n * Tests an object to determine whether it implements SASCredential.\n *\n * @param credential - The assumed SASCredential to be tested.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isSASCredential(credential: "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "credential",
+              "canonicalReference": "@azure/core-auth!~credential"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "SASCredential",
+              "canonicalReference": "@azure/core-auth!SASCredential:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/azureSASCredential.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "credential",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isSASCredential"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@azure/core-auth!isTokenCredential:function(1)",
+          "docComment": "/**\n * Tests an object to determine whether it implements TokenCredential.\n *\n * @param credential - The assumed TokenCredential to be tested.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isTokenCredential(credential: "
+            },
+            {
+              "kind": "Content",
+              "text": "unknown"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "credential",
+              "canonicalReference": "@azure/core-auth!~credential"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "TokenCredential",
+              "canonicalReference": "@azure/core-auth!TokenCredential:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/tokenCredential.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "credential",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isTokenCredential"
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-auth!KeyCredential:interface",
+          "docComment": "/**\n * Represents a credential defined by a static API key.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface KeyCredential "
+            }
+          ],
+          "fileUrlPath": "src/keyCredential.ts",
+          "releaseTag": "Public",
+          "name": "KeyCredential",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-auth!KeyCredential#key:member",
+              "docComment": "/**\n * The value of the API key represented as a string\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly key: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "key",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-auth!NamedKeyCredential:interface",
+          "docComment": "/**\n * Represents a credential defined by a static API name and key.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface NamedKeyCredential "
+            }
+          ],
+          "fileUrlPath": "src/azureNamedKeyCredential.ts",
+          "releaseTag": "Public",
+          "name": "NamedKeyCredential",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-auth!NamedKeyCredential#key:member",
+              "docComment": "/**\n * The value of the API key represented as a string\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly key: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "key",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-auth!NamedKeyCredential#name:member",
+              "docComment": "/**\n * The value of the API name represented as a string.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly name: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "name",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-auth!SASCredential:interface",
+          "docComment": "/**\n * Represents a credential defined by a static shared access signature.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface SASCredential "
+            }
+          ],
+          "fileUrlPath": "src/azureSASCredential.ts",
+          "releaseTag": "Public",
+          "name": "SASCredential",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-auth!SASCredential#signature:member",
+              "docComment": "/**\n * The value of the shared access signature represented as a string\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly signature: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "signature",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-auth!TokenCredential:interface",
+          "docComment": "/**\n * Represents a credential capable of providing an authentication token.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface TokenCredential "
+            }
+          ],
+          "fileUrlPath": "src/tokenCredential.ts",
+          "releaseTag": "Public",
+          "name": "TokenCredential",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@azure/core-auth!TokenCredential#getToken:member(1)",
+              "docComment": "/**\n * Gets the token provided by this credential.\n *\n * This method is called automatically by Azure SDK client libraries. You may call this method directly, but you must also handle token caching and token refreshing.\n *\n * @param scopes - The list of scopes for which the token will have access.\n *\n * @param options - The options used to configure any requests this TokenCredential implementation might make.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getToken(scopes: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string | string[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", options?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "GetTokenOptions",
+                  "canonicalReference": "@azure/core-auth!GetTokenOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "AccessToken",
+                  "canonicalReference": "@azure/core-auth!AccessToken:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": " | null>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 9
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "scopes",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "options",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": true
+                }
+              ],
+              "name": "getToken"
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-auth!TracingContext:interface",
+          "docComment": "/**\n * An interface structurally compatible with OpenTelemetry.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface TracingContext "
+            }
+          ],
+          "fileUrlPath": "src/tracing.ts",
+          "releaseTag": "Public",
+          "name": "TracingContext",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@azure/core-auth!TracingContext#deleteValue:member(1)",
+              "docComment": "/**\n * Return a new context which inherits from this context but does not contain a value for the given key.\n *\n * @param key - context key for which to clear a value\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "deleteValue(key: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "symbol"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TracingContext",
+                  "canonicalReference": "@azure/core-auth!TracingContext:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "key",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "deleteValue"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@azure/core-auth!TracingContext#getValue:member(1)",
+              "docComment": "/**\n * Get a value from the context.\n *\n * @param key - key which identifies a context value\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "getValue(key: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "symbol"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "unknown"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "key",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "getValue"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@azure/core-auth!TracingContext#setValue:member(1)",
+              "docComment": "/**\n * Create a new context which inherits from this context and has the given key set to the given value.\n *\n * @param key - context key for which to set the value\n *\n * @param value - value to set for the given key\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "setValue(key: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "symbol"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", value: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "unknown"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TracingContext",
+                  "canonicalReference": "@azure/core-auth!TracingContext:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "key",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "value",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "setValue"
+            }
+          ],
+          "extendsTokenRanges": []
+        }
+      ]
+    }
+  ]
+}

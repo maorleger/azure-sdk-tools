@@ -1,0 +1,5494 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.52.13",
+    "schemaVersion": 1011,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+      "noStandardTags": true,
+      "tagDefinitions": [
+        {
+          "tagName": "@alpha",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@beta",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@defaultValue",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@decorator",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@deprecated",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@eventProperty",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@example",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@experimental",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@inheritDoc",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@internal",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@label",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@link",
+          "syntaxKind": "inline",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@override",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@packageDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@param",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@privateRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@public",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@readonly",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@remarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@returns",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@sealed",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@see",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@throws",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@typeParam",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@virtual",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@hidden",
+          "syntaxKind": "modifier"
+        }
+      ],
+      "reportUnsupportedHtmlElements": false
+    },
+    "dependencies": {
+      "@azure/abort-controller": "^2.1.2",
+      "@azure/core-auth": "^1.10.0",
+      "@azure/core-rest-pipeline": "^1.22.0",
+      "@azure/core-tracing": "^1.3.0",
+      "@azure/core-util": "^1.13.0",
+      "@azure/logger": "^1.3.0",
+      "tslib": "^2.6.2"
+    }
+  },
+  "kind": "Package",
+  "canonicalReference": "@azure/core-client!",
+  "docComment": "",
+  "name": "@azure/core-client",
+  "preserveMemberOrder": false,
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "@azure/core-client!",
+      "name": "",
+      "preserveMemberOrder": false,
+      "members": [
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!AdditionalPolicyConfig:interface",
+          "docComment": "/**\n * Used to configure additional policies added to the pipeline at construction.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface AdditionalPolicyConfig "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "AdditionalPolicyConfig",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!AdditionalPolicyConfig#policy:member",
+              "docComment": "/**\n * A policy to be added.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "policy: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "PipelinePolicy",
+                  "canonicalReference": "@azure/core-rest-pipeline!PipelinePolicy:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "policy",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!AdditionalPolicyConfig#position:member",
+              "docComment": "/**\n * Determines if this policy be applied before or after retry logic. Only use `perRetry` if you need to modify the request again each time the operation is retried due to retryable service issues.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "position: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "\"perCall\" | \"perRetry\""
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "position",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@azure/core-client!authorizeRequestOnClaimChallenge:function(1)",
+          "docComment": "/**\n * This function can be used as a callback for the `bearerTokenAuthenticationPolicy` of `@azure/core-rest-pipeline`, to support CAE challenges: [Continuous Access Evaluation](https://learn.microsoft.com/azure/active-directory/conditional-access/concept-continuous-access-evaluation).\n *\n * Call the `bearerTokenAuthenticationPolicy` with the following options:\n * ```ts snippet:AuthorizeRequestOnClaimChallenge\n * import { bearerTokenAuthenticationPolicy } from \"@azure/core-rest-pipeline\";\n * import { authorizeRequestOnClaimChallenge } from \"@azure/core-client\";\n *\n * const policy = bearerTokenAuthenticationPolicy({\n *   challengeCallbacks: {\n *     authorizeRequestOnChallenge: authorizeRequestOnClaimChallenge,\n *   },\n *   scopes: [\"https://service/.default\"],\n * });\n * ```\n *\n * Once provided, the `bearerTokenAuthenticationPolicy` policy will internally handle Continuous Access Evaluation (CAE) challenges. When it can't complete a challenge it will return the 401 (unauthorized) response from ARM.\n *\n * Example challenge with claims:\n * ```\n * Bearer authorization_uri=\"https://login.windows-ppe.net/\", error=\"invalid_token\",\n * error_description=\"User session has been revoked\",\n * claims=\"eyJhY2Nlc3NfdG9rZW4iOnsibmJmIjp7ImVzc2VudGlhbCI6dHJ1ZSwgInZhbHVlIjoiMTYwMzc0MjgwMCJ9fX0=\"\n * ```\n *\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function authorizeRequestOnClaimChallenge(onChallengeOptions: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AuthorizeRequestOnChallengeOptions",
+              "canonicalReference": "@azure/core-rest-pipeline!AuthorizeRequestOnChallengeOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<boolean>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/authorizeRequestOnClaimChallenge.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 5
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "onChallengeOptions",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "authorizeRequestOnClaimChallenge"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@azure/core-client!authorizeRequestOnTenantChallenge:function(1)",
+          "docComment": "/**\n * Defines a callback to handle auth challenge for Storage APIs. This implements the bearer challenge process described here: https://learn.microsoft.com/rest/api/storageservices/authorize-with-azure-active-directory#bearer-challenge Handling has specific features for storage that departs to the general AAD challenge docs.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "authorizeRequestOnTenantChallenge: (challengeOptions: "
+            },
+            {
+              "kind": "Reference",
+              "text": "AuthorizeRequestOnChallengeOptions",
+              "canonicalReference": "@azure/core-rest-pipeline!AuthorizeRequestOnChallengeOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<boolean>"
+            }
+          ],
+          "fileUrlPath": "src/authorizeRequestOnTenantChallenge.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 5
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "challengeOptions",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "authorizeRequestOnTenantChallenge"
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!BaseMapper:interface",
+          "docComment": "/**\n * The base definition of a mapper. Can be used for XML and plain JavaScript objects.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface BaseMapper "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "BaseMapper",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!BaseMapper#constraints:member",
+              "docComment": "/**\n * Constraints to test the current value against\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constraints?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "MapperConstraints",
+                  "canonicalReference": "@azure/core-client!MapperConstraints:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "constraints",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!BaseMapper#defaultValue:member",
+              "docComment": "/**\n * Default value when one is not explicitly provided\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "defaultValue?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "defaultValue",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!BaseMapper#isConstant:member",
+              "docComment": "/**\n * Whether or not the current property is a constant\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "isConstant?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "isConstant",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!BaseMapper#nullable:member",
+              "docComment": "/**\n * Whether or not the current property allows mull as a value\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "nullable?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "nullable",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!BaseMapper#readOnly:member",
+              "docComment": "/**\n * Whether or not the current property is readonly\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readOnly?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "readOnly",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!BaseMapper#required:member",
+              "docComment": "/**\n * Whether or not the current property is required\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "required?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "required",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!BaseMapper#serializedName:member",
+              "docComment": "/**\n * The name to use when serializing\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "serializedName?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "serializedName",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!BaseMapper#type:member",
+              "docComment": "/**\n * Type of the mapper\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "type: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "MapperType",
+                  "canonicalReference": "@azure/core-client!MapperType:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "type",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!BaseMapper#xmlElementName:member",
+              "docComment": "/**\n * Name for the xml elements when serializing an array\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "xmlElementName?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "xmlElementName",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!BaseMapper#xmlIsAttribute:member",
+              "docComment": "/**\n * Determines if the current property should be serialized as an attribute of the parent xml element\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "xmlIsAttribute?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "xmlIsAttribute",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!BaseMapper#xmlIsMsText:member",
+              "docComment": "/**\n * Determines if the current property should be serialized as the inner content of the xml element\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "xmlIsMsText?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "xmlIsMsText",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!BaseMapper#xmlIsWrapped:member",
+              "docComment": "/**\n * Whether or not the current property should have a wrapping XML element\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "xmlIsWrapped?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "xmlIsWrapped",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!BaseMapper#xmlName:member",
+              "docComment": "/**\n * Name for the xml element\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "xmlName?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "xmlName",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!BaseMapper#xmlNamespace:member",
+              "docComment": "/**\n * Xml element namespace\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "xmlNamespace?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "xmlNamespace",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!BaseMapper#xmlNamespacePrefix:member",
+              "docComment": "/**\n * Xml element namespace prefix\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "xmlNamespacePrefix?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "xmlNamespacePrefix",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!CommonClientOptions:interface",
+          "docComment": "/**\n * The common set of options that high level clients are expected to expose.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CommonClientOptions extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "PipelineOptions",
+              "canonicalReference": "@azure/core-rest-pipeline!PipelineOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "CommonClientOptions",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!CommonClientOptions#additionalPolicies:member",
+              "docComment": "/**\n * Additional policies to include in the HTTP pipeline.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "additionalPolicies?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "AdditionalPolicyConfig",
+                  "canonicalReference": "@azure/core-client!AdditionalPolicyConfig:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "additionalPolicies",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!CommonClientOptions#allowInsecureConnection:member",
+              "docComment": "/**\n * Set to true if the request is sent over HTTP instead of HTTPS\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "allowInsecureConnection?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "allowInsecureConnection",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!CommonClientOptions#httpClient:member",
+              "docComment": "/**\n * The HttpClient that will be used to send HTTP requests.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "httpClient?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "HttpClient",
+                  "canonicalReference": "@azure/core-rest-pipeline!HttpClient:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "httpClient",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!CompositeMapper:interface",
+          "docComment": "/**\n * A mapper composed of other mappers.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CompositeMapper extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "BaseMapper",
+              "canonicalReference": "@azure/core-client!BaseMapper:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "CompositeMapper",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!CompositeMapper#type:member",
+              "docComment": "/**\n * The type descriptor of the `CompositeMapper`.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "type: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "CompositeMapperType",
+                  "canonicalReference": "@azure/core-client!CompositeMapperType:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "type",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!CompositeMapperType:interface",
+          "docComment": "/**\n * Helps build a mapper that describes how to map a set of properties of an object based on other mappers.\n *\n * Only one of the following properties should be present: `className`, `modelProperties` and `additionalProperties`.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface CompositeMapperType "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "CompositeMapperType",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!CompositeMapperType#additionalProperties:member",
+              "docComment": "/**\n * Used when a model has `additionalProperties: true`. Allows the generic processing of unnamed model properties on the response object.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "additionalProperties?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Mapper",
+                  "canonicalReference": "@azure/core-client!Mapper:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "additionalProperties",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!CompositeMapperType#className:member",
+              "docComment": "/**\n * Use `className` to reference another type definition.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "className?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "className",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!CompositeMapperType#modelProperties:member",
+              "docComment": "/**\n * Use `modelProperties` when the reference to the other type has been resolved.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "modelProperties?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{\n        [propertyName: string]: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Mapper",
+                  "canonicalReference": "@azure/core-client!Mapper:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";\n    }"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "modelProperties",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 4
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!CompositeMapperType#name:member",
+              "docComment": "/**\n * Name of the composite mapper type.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "name: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "\"Composite\""
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "name",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!CompositeMapperType#polymorphicDiscriminator:member",
+              "docComment": "/**\n * A polymorphic discriminator.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "polymorphicDiscriminator?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "PolymorphicDiscriminator",
+                  "canonicalReference": "@azure/core-client!PolymorphicDiscriminator:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "polymorphicDiscriminator",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!CompositeMapperType#uberParent:member",
+              "docComment": "/**\n * The name of the top-most parent scheme, the one that has no parents.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "uberParent?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "uberParent",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@azure/core-client!createClientPipeline:function(1)",
+          "docComment": "/**\n * Creates a new Pipeline for use with a Service Client. Adds in deserializationPolicy by default. Also adds in bearerTokenAuthenticationPolicy if passed a TokenCredential.\n *\n * @param options - Options to customize the created pipeline.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function createClientPipeline(options?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "InternalClientPipelineOptions",
+              "canonicalReference": "@azure/core-client!InternalClientPipelineOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Pipeline",
+              "canonicalReference": "@azure/core-rest-pipeline!Pipeline:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/pipeline.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "options",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "createClientPipeline"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@azure/core-client!createSerializer:function(1)",
+          "docComment": "/**\n * Method that creates and returns a Serializer.\n *\n * @param modelMappers - Known models to map\n *\n * @param isXML - If XML should be supported\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function createSerializer(modelMappers?: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    [key: string]: any;\n}"
+            },
+            {
+              "kind": "Content",
+              "text": ", isXML?: "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Serializer",
+              "canonicalReference": "@azure/core-client!Serializer:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/serializer.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "modelMappers",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": true
+            },
+            {
+              "parameterName": "isXML",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "createSerializer"
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!DeserializationContentTypes:interface",
+          "docComment": "/**\n * The content-types that will indicate that an operation response should be deserialized in a particular way.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface DeserializationContentTypes "
+            }
+          ],
+          "fileUrlPath": "src/deserializationPolicy.ts",
+          "releaseTag": "Public",
+          "name": "DeserializationContentTypes",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!DeserializationContentTypes#json:member",
+              "docComment": "/**\n * The content-types that indicate that an operation response should be deserialized as JSON. Defaults to [ \"application/json\", \"text/json\" ].\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "json?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "json",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!DeserializationContentTypes#xml:member",
+              "docComment": "/**\n * The content-types that indicate that an operation response should be deserialized as XML. Defaults to [ \"application/xml\", \"application/atom+xml\" ].\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "xml?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "xml",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@azure/core-client!deserializationPolicy:function(1)",
+          "docComment": "/**\n * This policy handles parsing out responses according to OperationSpecs on the request.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function deserializationPolicy(options?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "DeserializationPolicyOptions",
+              "canonicalReference": "@azure/core-client!DeserializationPolicyOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "PipelinePolicy",
+              "canonicalReference": "@azure/core-rest-pipeline!PipelinePolicy:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/deserializationPolicy.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "options",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "deserializationPolicy"
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@azure/core-client!deserializationPolicyName:var",
+          "docComment": "/**\n * The programmatic identifier of the deserializationPolicy.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "deserializationPolicyName = "
+            },
+            {
+              "kind": "Content",
+              "text": "\"deserializationPolicy\""
+            }
+          ],
+          "fileUrlPath": "src/deserializationPolicy.ts",
+          "initializerTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          },
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "deserializationPolicyName",
+          "variableTypeTokenRange": {
+            "startIndex": 0,
+            "endIndex": 0
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!DeserializationPolicyOptions:interface",
+          "docComment": "/**\n * Options to configure API response deserialization.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface DeserializationPolicyOptions "
+            }
+          ],
+          "fileUrlPath": "src/deserializationPolicy.ts",
+          "releaseTag": "Public",
+          "name": "DeserializationPolicyOptions",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!DeserializationPolicyOptions#expectedContentTypes:member",
+              "docComment": "/**\n * Configures the expected content types for the deserialization of JSON and XML response bodies.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "expectedContentTypes?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "DeserializationContentTypes",
+                  "canonicalReference": "@azure/core-client!DeserializationContentTypes:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "expectedContentTypes",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!DeserializationPolicyOptions#parseXML:member",
+              "docComment": "/**\n * A function that is able to parse XML. Required for XML support.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "parseXML?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "(str: string, opts?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "XmlOptions",
+                  "canonicalReference": "@azure/core-client!XmlOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ") => "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<any>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "parseXML",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 6
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!DeserializationPolicyOptions#serializerOptions:member",
+              "docComment": "/**\n * Configures behavior of xml parser and builder.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "serializerOptions?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "SerializerOptions",
+                  "canonicalReference": "@azure/core-client!SerializerOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "serializerOptions",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!DictionaryMapper:interface",
+          "docComment": "/**\n * A mapper describing plain JavaScript objects used as key/value pairs.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface DictionaryMapper extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "BaseMapper",
+              "canonicalReference": "@azure/core-client!BaseMapper:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "DictionaryMapper",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!DictionaryMapper#headerCollectionPrefix:member",
+              "docComment": "/**\n * Optionally, a prefix to add to the header collection.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "headerCollectionPrefix?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "headerCollectionPrefix",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!DictionaryMapper#type:member",
+              "docComment": "/**\n * The type descriptor of the `DictionaryMapper`.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "type: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "DictionaryMapperType",
+                  "canonicalReference": "@azure/core-client!DictionaryMapperType:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "type",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!DictionaryMapperType:interface",
+          "docComment": "/**\n * Helps build a mapper that describes how to parse a dictionary of mapped values.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface DictionaryMapperType "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "DictionaryMapperType",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!DictionaryMapperType#name:member",
+              "docComment": "/**\n * Name of the sequence type mapper.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "name: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "\"Dictionary\""
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "name",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!DictionaryMapperType#value:member",
+              "docComment": "/**\n * The mapper to use to map the value of each property in the dictionary.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "value: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Mapper",
+                  "canonicalReference": "@azure/core-client!Mapper:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "value",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!EnumMapper:interface",
+          "docComment": "/**\n * A mapper describing an enum value.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface EnumMapper extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "BaseMapper",
+              "canonicalReference": "@azure/core-client!BaseMapper:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "EnumMapper",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!EnumMapper#type:member",
+              "docComment": "/**\n * The type descriptor of the `EnumMapper`.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "type: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "EnumMapperType",
+                  "canonicalReference": "@azure/core-client!EnumMapperType:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "type",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!EnumMapperType:interface",
+          "docComment": "/**\n * Helps build a mapper that describes how to parse an enum value.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface EnumMapperType "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "EnumMapperType",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!EnumMapperType#allowedValues:member",
+              "docComment": "/**\n * Values allowed by this mapper.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "allowedValues: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "allowedValues",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!EnumMapperType#name:member",
+              "docComment": "/**\n * Name of the enum type mapper.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "name: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "\"Enum\""
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "name",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!FullOperationResponse:interface",
+          "docComment": "/**\n * Wrapper object for http request and response. Deserialized object is stored in the `parsedBody` property when the response body is received in JSON or XML.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface FullOperationResponse extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "PipelineResponse",
+              "canonicalReference": "@azure/core-rest-pipeline!PipelineResponse:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "FullOperationResponse",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!FullOperationResponse#parsedBody:member",
+              "docComment": "/**\n * The response body as parsed JSON or XML.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "parsedBody?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "parsedBody",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!FullOperationResponse#parsedHeaders:member",
+              "docComment": "/**\n * The parsed HTTP response headers.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "parsedHeaders?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{\n        [key: string]: unknown;\n    }"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "parsedHeaders",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!FullOperationResponse#request:member",
+              "docComment": "/**\n * The request that generated the response.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "request: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OperationRequest",
+                  "canonicalReference": "@azure/core-client!OperationRequest:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "request",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!InternalClientPipelineOptions:interface",
+          "docComment": "/**\n * Options for creating a Pipeline to use with ServiceClient. Mostly for customizing the auth policy (if using token auth) or the deserialization options when using XML.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface InternalClientPipelineOptions extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "InternalPipelineOptions",
+              "canonicalReference": "@azure/core-rest-pipeline!InternalPipelineOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/pipeline.ts",
+          "releaseTag": "Public",
+          "name": "InternalClientPipelineOptions",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!InternalClientPipelineOptions#credentialOptions:member",
+              "docComment": "/**\n * Options to customize bearerTokenAuthenticationPolicy.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "credentialOptions?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{\n        credentialScopes: string | string[];\n        credential: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TokenCredential",
+                  "canonicalReference": "@azure/core-auth!TokenCredential:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";\n    }"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "credentialOptions",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 4
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!InternalClientPipelineOptions#deserializationOptions:member",
+              "docComment": "/**\n * Options to customize deserializationPolicy.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "deserializationOptions?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "DeserializationPolicyOptions",
+                  "canonicalReference": "@azure/core-client!DeserializationPolicyOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "deserializationOptions",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!InternalClientPipelineOptions#serializationOptions:member",
+              "docComment": "/**\n * Options to customize serializationPolicy.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "serializationOptions?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "SerializationPolicyOptions",
+                  "canonicalReference": "@azure/core-client!SerializationPolicyOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "serializationOptions",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@azure/core-client!Mapper:type",
+          "docComment": "/**\n * Mappers are definitions of the data models used in the library. These data models are part of the Operation or Client definitions in the responses or parameters.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type Mapper = "
+            },
+            {
+              "kind": "Reference",
+              "text": "BaseMapper",
+              "canonicalReference": "@azure/core-client!BaseMapper:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "CompositeMapper",
+              "canonicalReference": "@azure/core-client!CompositeMapper:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "SequenceMapper",
+              "canonicalReference": "@azure/core-client!SequenceMapper:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "DictionaryMapper",
+              "canonicalReference": "@azure/core-client!DictionaryMapper:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "EnumMapper",
+              "canonicalReference": "@azure/core-client!EnumMapper:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "Mapper",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 10
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!MapperConstraints:interface",
+          "docComment": "/**\n * Description of various value constraints such as integer ranges and string regex.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface MapperConstraints "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "MapperConstraints",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!MapperConstraints#ExclusiveMaximum:member",
+              "docComment": "/**\n * The value should be less than the `ExclusiveMaximum` value.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "ExclusiveMaximum?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "ExclusiveMaximum",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!MapperConstraints#ExclusiveMinimum:member",
+              "docComment": "/**\n * The value should be greater than the `InclusiveMinimum` value.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "ExclusiveMinimum?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "ExclusiveMinimum",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!MapperConstraints#InclusiveMaximum:member",
+              "docComment": "/**\n * The value should be less than or equal to the `InclusiveMaximum` value.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "InclusiveMaximum?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "InclusiveMaximum",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!MapperConstraints#InclusiveMinimum:member",
+              "docComment": "/**\n * The value should be greater than or equal to the `InclusiveMinimum` value.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "InclusiveMinimum?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "InclusiveMinimum",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!MapperConstraints#MaxItems:member",
+              "docComment": "/**\n * The value must contain fewer items than the MaxItems value.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "MaxItems?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "MaxItems",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!MapperConstraints#MaxLength:member",
+              "docComment": "/**\n * The length should be smaller than the `MaxLength`.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "MaxLength?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "MaxLength",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!MapperConstraints#MinItems:member",
+              "docComment": "/**\n * The value must contain more items than the `MinItems` value.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "MinItems?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "MinItems",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!MapperConstraints#MinLength:member",
+              "docComment": "/**\n * The length should be bigger than the `MinLength`.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "MinLength?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "MinLength",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!MapperConstraints#MultipleOf:member",
+              "docComment": "/**\n * The value should be exactly divisible by the `MultipleOf` value.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "MultipleOf?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "MultipleOf",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!MapperConstraints#Pattern:member",
+              "docComment": "/**\n * The value must match the pattern.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "Pattern?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RegExp",
+                  "canonicalReference": "!RegExp:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "Pattern",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!MapperConstraints#UniqueItems:member",
+              "docComment": "/**\n * The value must contain only unique items.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "UniqueItems?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "true"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "UniqueItems",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@azure/core-client!MapperType:type",
+          "docComment": "/**\n * Type of the mapper. Includes known mappers.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type MapperType = "
+            },
+            {
+              "kind": "Reference",
+              "text": "SimpleMapperType",
+              "canonicalReference": "@azure/core-client!SimpleMapperType:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "CompositeMapperType",
+              "canonicalReference": "@azure/core-client!CompositeMapperType:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "SequenceMapperType",
+              "canonicalReference": "@azure/core-client!SequenceMapperType:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "DictionaryMapperType",
+              "canonicalReference": "@azure/core-client!DictionaryMapperType:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " | "
+            },
+            {
+              "kind": "Reference",
+              "text": "EnumMapperType",
+              "canonicalReference": "@azure/core-client!EnumMapperType:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "MapperType",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 10
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@azure/core-client!MapperTypeNames:var",
+          "docComment": "/**\n * Known types of Mappers\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "MapperTypeNames: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    readonly Base64Url: \"Base64Url\";\n    readonly Boolean: \"Boolean\";\n    readonly ByteArray: \"ByteArray\";\n    readonly Composite: \"Composite\";\n    readonly Date: \"Date\";\n    readonly DateTime: \"DateTime\";\n    readonly DateTimeRfc1123: \"DateTimeRfc1123\";\n    readonly Dictionary: \"Dictionary\";\n    readonly Enum: \"Enum\";\n    readonly Number: \"Number\";\n    readonly Object: \"Object\";\n    readonly Sequence: \"Sequence\";\n    readonly String: \"String\";\n    readonly Stream: \"Stream\";\n    readonly TimeSpan: \"TimeSpan\";\n    readonly UnixTime: \"UnixTime\";\n}"
+            }
+          ],
+          "fileUrlPath": "src/serializer.ts",
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "MapperTypeNames",
+          "variableTypeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!OperationArguments:interface",
+          "docComment": "/**\n * A collection of properties that apply to a single invocation of an operation.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface OperationArguments "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "OperationArguments",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "IndexSignature",
+              "canonicalReference": "@azure/core-client!OperationArguments:index(1)",
+              "docComment": "/**\n * The parameters that were passed to the operation method.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "[parameterName: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "]: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "unknown"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "parameterName",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ]
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationArguments#options:member",
+              "docComment": "/**\n * The optional arguments that are provided to an operation.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "options?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OperationOptions",
+                  "canonicalReference": "@azure/core-client!OperationOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "options",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!OperationOptions:interface",
+          "docComment": "/**\n * The base options type for all operations.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface OperationOptions "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "OperationOptions",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationOptions#abortSignal:member",
+              "docComment": "/**\n * The signal which can be used to abort requests.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "abortSignal?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "AbortSignalLike",
+                  "canonicalReference": "@azure/abort-controller!AbortSignalLike:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "abortSignal",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationOptions#onResponse:member",
+              "docComment": "/**\n * A function to be called each time a response is received from the server while performing the requested operation. May be called multiple times.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "onResponse?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "RawResponseCallback",
+                  "canonicalReference": "@azure/core-client!RawResponseCallback:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "onResponse",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationOptions#requestOptions:member",
+              "docComment": "/**\n * Options used when creating and sending HTTP requests for this operation.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "requestOptions?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OperationRequestOptions",
+                  "canonicalReference": "@azure/core-client!OperationRequestOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "requestOptions",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationOptions#serializerOptions:member",
+              "docComment": "/**\n * Options to override serialization/de-serialization behavior.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "serializerOptions?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "SerializerOptions",
+                  "canonicalReference": "@azure/core-client!SerializerOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "serializerOptions",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationOptions#tracingOptions:member",
+              "docComment": "/**\n * Options used when tracing is enabled.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "tracingOptions?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OperationTracingOptions",
+                  "canonicalReference": "@azure/core-tracing!OperationTracingOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "tracingOptions",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!OperationParameter:interface",
+          "docComment": "/**\n * A common interface that all Operation parameter's extend.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface OperationParameter "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "OperationParameter",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationParameter#mapper:member",
+              "docComment": "/**\n * The mapper that defines how to validate and serialize this parameter's value.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "mapper: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Mapper",
+                  "canonicalReference": "@azure/core-client!Mapper:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "mapper",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationParameter#parameterPath:member",
+              "docComment": "/**\n * The path to this parameter's value in OperationArguments or the object that contains paths for each property's value in OperationArguments.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "parameterPath: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ParameterPath",
+                  "canonicalReference": "@azure/core-client!ParameterPath:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "parameterPath",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!OperationQueryParameter:interface",
+          "docComment": "/**\n * A parameter for an operation that will be added as a query parameter to the operation's HTTP request.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface OperationQueryParameter extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "OperationParameter",
+              "canonicalReference": "@azure/core-client!OperationParameter:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "OperationQueryParameter",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationQueryParameter#collectionFormat:member",
+              "docComment": "/**\n * If this query parameter's value is a collection, what type of format should the value be converted to.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "collectionFormat?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "QueryCollectionFormat",
+                  "canonicalReference": "@azure/core-client!QueryCollectionFormat:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "collectionFormat",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationQueryParameter#skipEncoding:member",
+              "docComment": "/**\n * Whether or not to skip encoding the query parameter's value before adding it to the URL.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "skipEncoding?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "skipEncoding",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@azure/core-client!OperationRequest:type",
+          "docComment": "/**\n * A type alias for future proofing.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type OperationRequest = "
+            },
+            {
+              "kind": "Reference",
+              "text": "PipelineRequest",
+              "canonicalReference": "@azure/core-rest-pipeline!PipelineRequest:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "OperationRequest",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!OperationRequestInfo:interface",
+          "docComment": "/**\n * Metadata that is used to properly parse a response.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface OperationRequestInfo "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "OperationRequestInfo",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationRequestInfo#operationArguments:member",
+              "docComment": "/**\n * Used to encode the request.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "operationArguments?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OperationArguments",
+                  "canonicalReference": "@azure/core-client!OperationArguments:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "operationArguments",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationRequestInfo#operationResponseGetter:member",
+              "docComment": "/**\n * A function that returns the proper OperationResponseMap for the given OperationSpec and PipelineResponse combination. If this is undefined, then a simple status code lookup will be used.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "operationResponseGetter?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "(operationSpec: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OperationSpec",
+                  "canonicalReference": "@azure/core-client!OperationSpec:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", response: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "PipelineResponse",
+                  "canonicalReference": "@azure/core-rest-pipeline!PipelineResponse:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ") => undefined | "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OperationResponseMap",
+                  "canonicalReference": "@azure/core-client!OperationResponseMap:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "operationResponseGetter",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 7
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationRequestInfo#operationSpec:member",
+              "docComment": "/**\n * Used to parse the response.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "operationSpec?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OperationSpec",
+                  "canonicalReference": "@azure/core-client!OperationSpec:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "operationSpec",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationRequestInfo#shouldDeserialize:member",
+              "docComment": "/**\n * Whether or not the PipelineResponse should be deserialized. Defaults to true.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "shouldDeserialize?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean | ((response: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "PipelineResponse",
+                  "canonicalReference": "@azure/core-rest-pipeline!PipelineResponse:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ") => boolean)"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "shouldDeserialize",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 4
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!OperationRequestOptions:interface",
+          "docComment": "/**\n * Options used when creating and sending HTTP requests for this operation.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface OperationRequestOptions "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "OperationRequestOptions",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationRequestOptions#allowInsecureConnection:member",
+              "docComment": "/**\n * Set to true if the request is sent over HTTP instead of HTTPS\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "allowInsecureConnection?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "allowInsecureConnection",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationRequestOptions#customHeaders:member",
+              "docComment": "/**\n * User defined custom request headers that will be applied before the request is sent.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "customHeaders?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{\n        [key: string]: string;\n    }"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "customHeaders",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationRequestOptions#onDownloadProgress:member",
+              "docComment": "/**\n * Callback which fires upon download progress.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "onDownloadProgress?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "(progress: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TransferProgressEvent",
+                  "canonicalReference": "@azure/core-rest-pipeline!TransferProgressEvent:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ") => void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "onDownloadProgress",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 4
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationRequestOptions#onUploadProgress:member",
+              "docComment": "/**\n * Callback which fires upon upload progress.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "onUploadProgress?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "(progress: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TransferProgressEvent",
+                  "canonicalReference": "@azure/core-rest-pipeline!TransferProgressEvent:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ") => void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "onUploadProgress",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 4
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationRequestOptions#shouldDeserialize:member",
+              "docComment": "/**\n * Whether or not the HttpOperationResponse should be deserialized. If this is undefined, then the HttpOperationResponse should be deserialized.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "shouldDeserialize?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean | ((response: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "PipelineResponse",
+                  "canonicalReference": "@azure/core-rest-pipeline!PipelineResponse:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ") => boolean)"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "shouldDeserialize",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 4
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationRequestOptions#timeout:member",
+              "docComment": "/**\n * The number of milliseconds a request can take before automatically being terminated.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "timeout?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "number"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "timeout",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!OperationResponseMap:interface",
+          "docComment": "/**\n * An OperationResponse that can be returned from an operation request for a single status code.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface OperationResponseMap "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "OperationResponseMap",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationResponseMap#bodyMapper:member",
+              "docComment": "/**\n * The mapper that will be used to deserialize the response body.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "bodyMapper?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Mapper",
+                  "canonicalReference": "@azure/core-client!Mapper:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "bodyMapper",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationResponseMap#headersMapper:member",
+              "docComment": "/**\n * The mapper that will be used to deserialize the response headers.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "headersMapper?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Mapper",
+                  "canonicalReference": "@azure/core-client!Mapper:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "headersMapper",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationResponseMap#isError:member",
+              "docComment": "/**\n * Indicates if this is an error response\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "isError?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "isError",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!OperationSpec:interface",
+          "docComment": "/**\n * A specification that defines an operation.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface OperationSpec "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "OperationSpec",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationSpec#baseUrl:member",
+              "docComment": "/**\n * The URL that was provided in the service's specification. This will still have all of the URL template variables in it. If this is not provided when the OperationSpec is created, then it will be populated by a \"baseUri\" property on the ServiceClient.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly baseUrl?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "baseUrl",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationSpec#contentType:member",
+              "docComment": "/**\n * The content type of the request body. This value will be used as the \"Content-Type\" header if it is provided.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly contentType?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "contentType",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationSpec#formDataParameters:member",
+              "docComment": "/**\n * The parameters to the operation method that will be used to create a formdata body for the operation's HTTP request.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly formDataParameters?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ReadonlyArray",
+                  "canonicalReference": "!ReadonlyArray:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OperationParameter",
+                  "canonicalReference": "@azure/core-client!OperationParameter:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "formDataParameters",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationSpec#headerParameters:member",
+              "docComment": "/**\n * The parameters to the operation method that will be converted to headers on the operation's HTTP request.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly headerParameters?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ReadonlyArray",
+                  "canonicalReference": "!ReadonlyArray:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OperationParameter",
+                  "canonicalReference": "@azure/core-client!OperationParameter:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "headerParameters",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationSpec#httpMethod:member",
+              "docComment": "/**\n * The HTTP method that should be used by requests for this operation.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly httpMethod: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "HttpMethods",
+                  "canonicalReference": "@azure/core-util!HttpMethods:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "httpMethod",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationSpec#isXML:member",
+              "docComment": "/**\n * Whether or not this operation uses XML request and response bodies.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly isXML?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "isXML",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationSpec#mediaType:member",
+              "docComment": "/**\n * The media type of the request body. This value can be used to aide in serialization if it is provided.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly mediaType?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "\"json\" | \"xml\" | \"form\" | \"binary\" | \"multipart\" | \"text\" | \"unknown\" | string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "mediaType",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationSpec#path:member",
+              "docComment": "/**\n * The fixed path for this operation's URL. This will still have all of the URL template variables in it.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly path?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "path",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationSpec#queryParameters:member",
+              "docComment": "/**\n * The parameters to the operation method that will be added to the constructed URL's query.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly queryParameters?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ReadonlyArray",
+                  "canonicalReference": "!ReadonlyArray:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OperationQueryParameter",
+                  "canonicalReference": "@azure/core-client!OperationQueryParameter:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "queryParameters",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationSpec#requestBody:member",
+              "docComment": "/**\n * The parameter that will be used to construct the HTTP request's body.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly requestBody?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OperationParameter",
+                  "canonicalReference": "@azure/core-client!OperationParameter:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "requestBody",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationSpec#responses:member",
+              "docComment": "/**\n * The different types of responses that this operation can return based on what status code is returned.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly responses: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{\n        [responseCode: string]: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OperationResponseMap",
+                  "canonicalReference": "@azure/core-client!OperationResponseMap:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";\n    }"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "responses",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 4
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationSpec#serializer:member",
+              "docComment": "/**\n * The serializer to use in this operation.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly serializer: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Serializer",
+                  "canonicalReference": "@azure/core-client!Serializer:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "serializer",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationSpec#urlParameters:member",
+              "docComment": "/**\n * The parameters to the operation method that will be substituted into the constructed URL.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly urlParameters?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ReadonlyArray",
+                  "canonicalReference": "!ReadonlyArray:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OperationURLParameter",
+                  "canonicalReference": "@azure/core-client!OperationURLParameter:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "urlParameters",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 5
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!OperationURLParameter:interface",
+          "docComment": "/**\n * A parameter for an operation that will be substituted into the operation's request URL.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface OperationURLParameter extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "OperationParameter",
+              "canonicalReference": "@azure/core-client!OperationParameter:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "OperationURLParameter",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!OperationURLParameter#skipEncoding:member",
+              "docComment": "/**\n * Whether or not to skip encoding the URL parameter's value before adding it to the URL.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "skipEncoding?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "skipEncoding",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@azure/core-client!ParameterPath:type",
+          "docComment": "/**\n * Encodes how to reach a particular property on an object.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type ParameterPath = "
+            },
+            {
+              "kind": "Content",
+              "text": "string | string[] | {\n    [propertyName: string]: "
+            },
+            {
+              "kind": "Reference",
+              "text": "ParameterPath",
+              "canonicalReference": "@azure/core-client!ParameterPath:type"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n}"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "ParameterPath",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!PolymorphicDiscriminator:interface",
+          "docComment": "/**\n * Used to disambiguate discriminated type unions. For example, if response can have many shapes but also includes a 'kind' field (or similar), that field can be used to determine how to deserialize the response to the correct type.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface PolymorphicDiscriminator "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "PolymorphicDiscriminator",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "IndexSignature",
+              "canonicalReference": "@azure/core-client!PolymorphicDiscriminator:index(1)",
+              "docComment": "/**\n * It may contain any other property.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "[key: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "]: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "key",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ]
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!PolymorphicDiscriminator#clientName:member",
+              "docComment": "/**\n * Name to use on the resulting object instead of the original property name. Useful since the JSON property could be difficult to work with. For example: For a field received as `@odata.kind`, the final object could instead include a property simply named `kind`.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "clientName: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "clientName",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!PolymorphicDiscriminator#serializedName:member",
+              "docComment": "/**\n * Name of the discriminant property in the original JSON payload, e.g. `@odata.kind`.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "serializedName: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "serializedName",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@azure/core-client!QueryCollectionFormat:type",
+          "docComment": "/**\n * The format that will be used to join an array of values together for a query parameter value.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type QueryCollectionFormat = "
+            },
+            {
+              "kind": "Content",
+              "text": "\"CSV\" | \"SSV\" | \"TSV\" | \"Pipes\" | \"Multi\""
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "QueryCollectionFormat",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          }
+        },
+        {
+          "kind": "TypeAlias",
+          "canonicalReference": "@azure/core-client!RawResponseCallback:type",
+          "docComment": "/**\n * A function to be called each time a response is received from the server while performing the requested operation. May be called multiple times.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export type RawResponseCallback = "
+            },
+            {
+              "kind": "Content",
+              "text": "(rawResponse: "
+            },
+            {
+              "kind": "Reference",
+              "text": "FullOperationResponse",
+              "canonicalReference": "@azure/core-client!FullOperationResponse:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ", flatResponse: unknown, error?: unknown) => void"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "RawResponseCallback",
+          "typeTokenRange": {
+            "startIndex": 1,
+            "endIndex": 4
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!SequenceMapper:interface",
+          "docComment": "/**\n * A mapper describing arrays.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface SequenceMapper extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "BaseMapper",
+              "canonicalReference": "@azure/core-client!BaseMapper:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "SequenceMapper",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!SequenceMapper#type:member",
+              "docComment": "/**\n * The type descriptor of the `SequenceMapper`.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "type: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "SequenceMapperType",
+                  "canonicalReference": "@azure/core-client!SequenceMapperType:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "type",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!SequenceMapperType:interface",
+          "docComment": "/**\n * Helps build a mapper that describes how to parse a sequence of mapped values.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface SequenceMapperType "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "SequenceMapperType",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!SequenceMapperType#element:member",
+              "docComment": "/**\n * The mapper to use to map each one of the properties of the sequence.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "element: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Mapper",
+                  "canonicalReference": "@azure/core-client!Mapper:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "element",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!SequenceMapperType#name:member",
+              "docComment": "/**\n * Name of the sequence type mapper.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "name: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "\"Sequence\""
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "name",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "@azure/core-client!serializationPolicy:function(1)",
+          "docComment": "/**\n * This policy handles assembling the request body and headers using an OperationSpec and OperationArguments on the request.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function serializationPolicy(options?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "SerializationPolicyOptions",
+              "canonicalReference": "@azure/core-client!SerializationPolicyOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "PipelinePolicy",
+              "canonicalReference": "@azure/core-rest-pipeline!PipelinePolicy:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "src/serializationPolicy.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "options",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "serializationPolicy"
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@azure/core-client!serializationPolicyName:var",
+          "docComment": "/**\n * The programmatic identifier of the serializationPolicy.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "serializationPolicyName = "
+            },
+            {
+              "kind": "Content",
+              "text": "\"serializationPolicy\""
+            }
+          ],
+          "fileUrlPath": "src/serializationPolicy.ts",
+          "initializerTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          },
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "serializationPolicyName",
+          "variableTypeTokenRange": {
+            "startIndex": 0,
+            "endIndex": 0
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!SerializationPolicyOptions:interface",
+          "docComment": "/**\n * Options to configure API request serialization.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface SerializationPolicyOptions "
+            }
+          ],
+          "fileUrlPath": "src/serializationPolicy.ts",
+          "releaseTag": "Public",
+          "name": "SerializationPolicyOptions",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!SerializationPolicyOptions#serializerOptions:member",
+              "docComment": "/**\n * Configures behavior of xml parser and builder.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "serializerOptions?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "SerializerOptions",
+                  "canonicalReference": "@azure/core-client!SerializerOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "serializerOptions",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!SerializationPolicyOptions#stringifyXML:member",
+              "docComment": "/**\n * A function that is able to write XML. Required for XML support.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "stringifyXML?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "(obj: any, opts?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "XmlOptions",
+                  "canonicalReference": "@azure/core-client!XmlOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ") => string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "stringifyXML",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 4
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!Serializer:interface",
+          "docComment": "/**\n * Used to map raw response objects to final shapes. Helps packing and unpacking Dates and other encoded types that are not intrinsic to JSON. Also allows pulling values from headers, as well as inserting default values and constants.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface Serializer "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "Serializer",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@azure/core-client!Serializer#deserialize:member(1)",
+              "docComment": "/**\n * Deserialize the given object based on its metadata defined in the mapper.\n *\n * @param mapper - The mapper which defines the metadata of the serializable object.\n *\n * @param responseBody - A valid Javascript entity to be deserialized.\n *\n * @param objectName - Name of the deserialized object.\n *\n * @param options - Controls behavior of XML parser and builder.\n *\n * @returns A valid deserialized Javascript object.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "deserialize(mapper: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Mapper",
+                  "canonicalReference": "@azure/core-client!Mapper:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", responseBody: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", objectName: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", options?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "SerializerOptions",
+                  "canonicalReference": "@azure/core-client!SerializerOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 9,
+                "endIndex": 10
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "mapper",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "responseBody",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "objectName",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "options",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 7,
+                    "endIndex": 8
+                  },
+                  "isOptional": true
+                }
+              ],
+              "name": "deserialize"
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!Serializer#isXML:member",
+              "docComment": "/**\n * Whether the contents are XML or not.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly isXML: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "isXML",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!Serializer#modelMappers:member",
+              "docComment": "/**\n * The provided model mapper.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly modelMappers: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "{\n        [key: string]: any;\n    }"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "modelMappers",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@azure/core-client!Serializer#serialize:member(1)",
+              "docComment": "/**\n * Serialize the given object based on its metadata defined in the mapper.\n *\n * @param mapper - The mapper which defines the metadata of the serializable object.\n *\n * @param object - A valid Javascript object to be serialized.\n *\n * @param objectName - Name of the serialized object.\n *\n * @param options - additional options to deserialization.\n *\n * @returns A valid serialized Javascript object.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "serialize(mapper: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Mapper",
+                  "canonicalReference": "@azure/core-client!Mapper:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", object: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", objectName?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", options?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "SerializerOptions",
+                  "canonicalReference": "@azure/core-client!SerializerOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 9,
+                "endIndex": 10
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "mapper",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "object",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "objectName",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": true
+                },
+                {
+                  "parameterName": "options",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 7,
+                    "endIndex": 8
+                  },
+                  "isOptional": true
+                }
+              ],
+              "name": "serialize"
+            },
+            {
+              "kind": "MethodSignature",
+              "canonicalReference": "@azure/core-client!Serializer#validateConstraints:member(1)",
+              "docComment": "/**\n * Validates constraints, if any. This function will throw if the provided value does not respect those constraints.\n *\n * @deprecated\n *\n * Removing the constraints validation on client side.\n *\n * @param mapper - The definition of data models.\n *\n * @param value - The value.\n *\n * @param objectName - Name of the object. Used in the error messages.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "validateConstraints(mapper: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Mapper",
+                  "canonicalReference": "@azure/core-client!Mapper:type"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", value: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "any"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", objectName: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Content",
+                  "text": "void"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isOptional": false,
+              "returnTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 8
+              },
+              "releaseTag": "Public",
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "mapper",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "value",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "objectName",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 5,
+                    "endIndex": 6
+                  },
+                  "isOptional": false
+                }
+              ],
+              "name": "validateConstraints"
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!SerializerOptions:interface",
+          "docComment": "/**\n * Options to configure serialization/de-serialization behavior.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface SerializerOptions "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "SerializerOptions",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!SerializerOptions#ignoreUnknownProperties:member",
+              "docComment": "/**\n * Normally additional properties are included in the result object, even if there is no mapper for them. This flag disables this behavior when true. It is used when parsing headers to avoid polluting the result object.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "ignoreUnknownProperties?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "ignoreUnknownProperties",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!SerializerOptions#xml:member",
+              "docComment": "/**\n * Options to configure xml parser/builder behavior.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "xml: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "XmlOptions",
+                  "canonicalReference": "@azure/core-client!XmlOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "xml",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Class",
+          "canonicalReference": "@azure/core-client!ServiceClient:class",
+          "docComment": "/**\n * Initializes a new instance of the ServiceClient.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare class ServiceClient "
+            }
+          ],
+          "fileUrlPath": "src/serviceClient.ts",
+          "releaseTag": "Public",
+          "isAbstract": false,
+          "name": "ServiceClient",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "Constructor",
+              "canonicalReference": "@azure/core-client!ServiceClient:constructor(1)",
+              "docComment": "/**\n * The ServiceClient constructor\n *\n * @param options - The service client options that govern the behavior of the client.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "constructor(options?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "ServiceClientOptions",
+                  "canonicalReference": "@azure/core-client!ServiceClientOptions:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ");"
+                }
+              ],
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "options",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": true
+                }
+              ]
+            },
+            {
+              "kind": "Property",
+              "canonicalReference": "@azure/core-client!ServiceClient#pipeline:member",
+              "docComment": "/**\n * The pipeline used by this client to make requests\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "readonly pipeline: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Pipeline",
+                  "canonicalReference": "@azure/core-rest-pipeline!Pipeline:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": true,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "pipeline",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isStatic": false,
+              "isProtected": false,
+              "isAbstract": false
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@azure/core-client!ServiceClient#sendOperationRequest:member(1)",
+              "docComment": "/**\n * Send an HTTP request that is populated using the provided OperationSpec.\n *\n * @param operationArguments - The arguments that the HTTP request's templated values will be populated from.\n *\n * @param operationSpec - The OperationSpec to use to populate the httpRequest.\n *\n * @typeParam T - The typed result of the request, based on the OperationSpec.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "sendOperationRequest<T>(operationArguments: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OperationArguments",
+                  "canonicalReference": "@azure/core-client!OperationArguments:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ", operationSpec: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "OperationSpec",
+                  "canonicalReference": "@azure/core-client!OperationSpec:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<T>"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "typeParameters": [
+                {
+                  "typeParameterName": "T",
+                  "constraintTokenRange": {
+                    "startIndex": 0,
+                    "endIndex": 0
+                  },
+                  "defaultTypeTokenRange": {
+                    "startIndex": 0,
+                    "endIndex": 0
+                  }
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "operationArguments",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                },
+                {
+                  "parameterName": "operationSpec",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 3,
+                    "endIndex": 4
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "sendOperationRequest"
+            },
+            {
+              "kind": "Method",
+              "canonicalReference": "@azure/core-client!ServiceClient#sendRequest:member(1)",
+              "docComment": "/**\n * Send the provided httpRequest.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "sendRequest(request: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "PipelineRequest",
+                  "canonicalReference": "@azure/core-rest-pipeline!PipelineRequest:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "): "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Promise",
+                  "canonicalReference": "!Promise:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": "<"
+                },
+                {
+                  "kind": "Reference",
+                  "text": "PipelineResponse",
+                  "canonicalReference": "@azure/core-rest-pipeline!PipelineResponse:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ">"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isStatic": false,
+              "returnTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 7
+              },
+              "releaseTag": "Public",
+              "isProtected": false,
+              "overloadIndex": 1,
+              "parameters": [
+                {
+                  "parameterName": "request",
+                  "parameterTypeTokenRange": {
+                    "startIndex": 1,
+                    "endIndex": 2
+                  },
+                  "isOptional": false
+                }
+              ],
+              "isOptional": false,
+              "isAbstract": false,
+              "name": "sendRequest"
+            }
+          ],
+          "implementsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!ServiceClientOptions:interface",
+          "docComment": "/**\n * Options to be provided while creating the client.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface ServiceClientOptions extends "
+            },
+            {
+              "kind": "Reference",
+              "text": "CommonClientOptions",
+              "canonicalReference": "@azure/core-client!CommonClientOptions:interface"
+            },
+            {
+              "kind": "Content",
+              "text": " "
+            }
+          ],
+          "fileUrlPath": "src/serviceClient.ts",
+          "releaseTag": "Public",
+          "name": "ServiceClientOptions",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!ServiceClientOptions#baseUri:member",
+              "docComment": "/**\n * If specified, this is the base URI that requests will be made against for this ServiceClient. If it is not specified, then all OperationSpecs must contain a baseUrl property.\n *\n * @deprecated\n *\n * This property is deprecated and will be removed soon, please use endpoint instead\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "baseUri?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "baseUri",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!ServiceClientOptions#credential:member",
+              "docComment": "/**\n * Credential used to authenticate the request.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "credential?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "TokenCredential",
+                  "canonicalReference": "@azure/core-auth!TokenCredential:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "credential",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!ServiceClientOptions#credentialScopes:member",
+              "docComment": "/**\n * If specified, will be used to build the BearerTokenAuthenticationPolicy.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "credentialScopes?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string | string[]"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "credentialScopes",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!ServiceClientOptions#endpoint:member",
+              "docComment": "/**\n * If specified, this is the endpoint that requests will be made against for this ServiceClient. If it is not specified, then all OperationSpecs must contain a baseUrl property. to encourage customer to use endpoint, we mark the baseUri as deprecated.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "endpoint?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "endpoint",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!ServiceClientOptions#pipeline:member",
+              "docComment": "/**\n * A customized pipeline to use, otherwise a default one will be created.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "pipeline?: "
+                },
+                {
+                  "kind": "Reference",
+                  "text": "Pipeline",
+                  "canonicalReference": "@azure/core-rest-pipeline!Pipeline:interface"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "pipeline",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!ServiceClientOptions#requestContentType:member",
+              "docComment": "/**\n * The default request content type for the service. Used if no requestContentType is present on an OperationSpec.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "requestContentType?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "requestContentType",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": [
+            {
+              "startIndex": 1,
+              "endIndex": 2
+            }
+          ]
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!SimpleMapperType:interface",
+          "docComment": "/**\n * The type of a simple mapper.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface SimpleMapperType "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "SimpleMapperType",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!SimpleMapperType#name:member",
+              "docComment": "/**\n * Name of the type of the property.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "name: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "\"Base64Url\" | \"Boolean\" | \"ByteArray\" | \"Date\" | \"DateTime\" | \"DateTimeRfc1123\" | \"Object\" | \"Stream\" | \"String\" | \"TimeSpan\" | \"UnixTime\" | \"Uuid\" | \"Number\" | \"any\""
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "name",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!SpanConfig:interface",
+          "docComment": "/**\n * Configuration for creating a new Tracing Span\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface SpanConfig "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "SpanConfig",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!SpanConfig#namespace:member",
+              "docComment": "/**\n * Service namespace\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "namespace: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "namespace",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!SpanConfig#packagePrefix:member",
+              "docComment": "/**\n * Package name prefix\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "packagePrefix: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": false,
+              "releaseTag": "Public",
+              "name": "packagePrefix",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@azure/core-client!XML_ATTRKEY:var",
+          "docComment": "/**\n * Default key used to access the XML attributes.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "XML_ATTRKEY = "
+            },
+            {
+              "kind": "Content",
+              "text": "\"$\""
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "initializerTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          },
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "XML_ATTRKEY",
+          "variableTypeTokenRange": {
+            "startIndex": 0,
+            "endIndex": 0
+          }
+        },
+        {
+          "kind": "Variable",
+          "canonicalReference": "@azure/core-client!XML_CHARKEY:var",
+          "docComment": "/**\n * Default key used to access the XML value content.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "XML_CHARKEY = "
+            },
+            {
+              "kind": "Content",
+              "text": "\"_\""
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "initializerTokenRange": {
+            "startIndex": 1,
+            "endIndex": 2
+          },
+          "isReadonly": true,
+          "releaseTag": "Public",
+          "name": "XML_CHARKEY",
+          "variableTypeTokenRange": {
+            "startIndex": 0,
+            "endIndex": 0
+          }
+        },
+        {
+          "kind": "Interface",
+          "canonicalReference": "@azure/core-client!XmlOptions:interface",
+          "docComment": "/**\n * Options to govern behavior of xml parser and builder.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export interface XmlOptions "
+            }
+          ],
+          "fileUrlPath": "src/interfaces.ts",
+          "releaseTag": "Public",
+          "name": "XmlOptions",
+          "preserveMemberOrder": false,
+          "members": [
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!XmlOptions#includeRoot:member",
+              "docComment": "/**\n * indicates whether the root element is to be included or not in the output when parsing XML.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "includeRoot?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "boolean"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "includeRoot",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!XmlOptions#rootName:member",
+              "docComment": "/**\n * indicates the name of the root element in the resulting XML when building XML.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "rootName?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "rootName",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            },
+            {
+              "kind": "PropertySignature",
+              "canonicalReference": "@azure/core-client!XmlOptions#xmlCharKey:member",
+              "docComment": "/**\n * key used to access the XML value content when parsing XML.\n */\n",
+              "excerptTokens": [
+                {
+                  "kind": "Content",
+                  "text": "xmlCharKey?: "
+                },
+                {
+                  "kind": "Content",
+                  "text": "string"
+                },
+                {
+                  "kind": "Content",
+                  "text": ";"
+                }
+              ],
+              "isReadonly": false,
+              "isOptional": true,
+              "releaseTag": "Public",
+              "name": "xmlCharKey",
+              "propertyTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              }
+            }
+          ],
+          "extendsTokenRanges": []
+        }
+      ]
+    }
+  ]
+}
