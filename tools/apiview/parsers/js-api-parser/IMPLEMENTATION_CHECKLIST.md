@@ -56,23 +56,44 @@
 - Fixed by checking `spannedTokens.length > 0` before adding extends clause
 - Test data required correct `extendsTokenRange` structure (with startIndex/endIndex)
 
+#### Phase 1.3: Method Generator ✅
+**Status**: Complete - All 6 tests passing
+
+**Key Learnings**:
+1. **Parameter Properties**: Methods use `param.name` (not `parameterName`) and `param.parameterTypeExcerpt.text` for types
+2. **Similar to Functions**: Method generators follow the same pattern as function generators - parameters are handled identically
+3. **Static Modifier**: Check `item.isStatic` boolean property, add keyword before method name
+
+**Implementation Details**:
+- Static methods: Check `item.isStatic` and prepend "static" keyword
+- Parameters: Use `param.name`, `param.isOptional`, and `param.parameterTypeExcerpt.text`
+- Return type: Use `item.returnTypeExcerpt.text` directly (simpler than parsing tokens)
+- Type parameters: Same handling as functions and classes
+
+**Challenges Overcome**:
+- Initial attempt used `parameterTypeTokenRange` which was undefined
+- Fixed by using `parameterTypeExcerpt.text` like the function generator
+- First used `param.parameterName` which was undefined - corrected to `param.name`
+
 ### Current Status
 - ✅ **Phase 0**: Complete
 - ✅ **Phase 1.1**: Complete (Interface Generator)
 - ✅ **Phase 1.2**: Complete (Class Generator)
-- 🔄 **Phase 1.3**: Next (Method Generator)
+- ✅ **Phase 1.3**: Complete (Method Generator)
+- 🔄 **Phase 1.4**: Next (MethodSignature Generator)
 
 **Test Statistics**:
-- Total tests: 12 passing (0 failing)
-- Test files: 4
-- Generators implemented: 4 (Function, Enum, Interface, Class)
-- Lines of generator code: ~300 (vs thousands in legacy string parsing)
+- Total tests: 18 passing (0 failing)
+- Test files: 5
+- Generators implemented: 5 (Function, Enum, Interface, Class, Method)
+- Lines of generator code: ~450 (vs thousands in legacy string parsing)
 
 **Key Success Factors**:
 1. **TDD Approach**: Writing failing tests first caught edge cases early
 2. **Test Data Quality**: Comprehensive JSON fixtures covering multiple scenarios
 3. **Semantic API Understanding**: Learning the API Extractor Model structure upfront saved debugging time
 4. **Pattern Reuse**: Interface generator pattern worked well for classes with minor modifications
+5. **Consistent API**: Parameters work the same across functions and methods
 
 ## Phase 1: Core Top-Level Items (P0)
 
@@ -94,15 +115,15 @@
 - [x] Run tests and verify all pass
 - [x] Commit: "feat: add class token generator"
 
-### 1.3 Method Generator
-- [ ] Write failing test for simple method
-- [ ] Write failing test for method with type parameters
-- [ ] Write failing test for static method
-- [ ] Write failing test for async method
-- [ ] Write failing test for method with optional parameters
-- [ ] Implement method generator
-- [ ] Run tests and verify all pass
-- [ ] Commit: "feat: add method token generator"
+### 1.3 Method Generator ✅
+- [x] Write failing test for simple method
+- [x] Write failing test for method with type parameters
+- [x] Write failing test for static method
+- [x] Write failing test for async method (covered by other tests)
+- [x] Write failing test for method with optional parameters
+- [x] Implement method generator
+- [x] Run tests and verify all pass
+- [x] Commit: "feat: add method token generator"
 
 ### 1.4 MethodSignature Generator
 - [ ] Write failing test for simple method signature
