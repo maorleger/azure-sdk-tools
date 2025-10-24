@@ -17,15 +17,15 @@
 - [x] Run tests and verify all pass
 - [x] Commit: "feat: add interface token generator"
 
-### 1.2 Class Generator
-- [ ] Write failing test for simple class
-- [ ] Write failing test for class with type parameters
-- [ ] Write failing test for abstract class
-- [ ] Write failing test for class with extends clause
-- [ ] Write failing test for class with implements clause
-- [ ] Implement class generator
-- [ ] Run tests and verify all pass
-- [ ] Commit: "feat: add class token generator"
+### 1.2 Class Generator ✅
+- [x] Write failing test for simple class
+- [x] Write failing test for class with type parameters
+- [x] Write failing test for abstract class
+- [x] Write failing test for class with extends clause
+- [x] Write failing test for class with implements clause
+- [x] Implement class generator
+- [x] Run tests and verify all pass
+- [x] Commit: "feat: add class token generator"
 
 ### 1.3 Method Generator
 - [ ] Write failing test for simple method
